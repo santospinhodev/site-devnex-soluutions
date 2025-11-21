@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devnex Solutions</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="logo.png" alt="Devnex Solutions Logo">
-                </a>
-            </div>
-            <div class="search-wrapper" role="search">
-                <input type="search" placeholder="Buscar..." class="search-input">
-                <button class="close-search" aria-label="Fechar busca">X</button>
-            </div>
-            <nav class="main-nav" aria-label="Navegação Principal">
-                <ul>
-                    <li><a href="/">Início</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <button class="search-icon" aria-label="Abrir busca">🔍</button>
-                <button class="hamburger" aria-label="Abrir Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+      <div class="header-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="./assets/img/logo-lado-a-lado-devnexsolution.svg"
+              alt="Devnex Solutions Logo"
+            />
+          </a>
         </div>
-        <nav class="mobile-nav" aria-label="Menu Mobile">
-            <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+        <div class="search-wrapper" role="search">
+          <input type="search" placeholder="Buscar..." class="search-input" />
+          <button class="close-search" aria-label="Fechar busca">X</button>
+        </div>
+        <nav class="main-nav" aria-label="Navegação Principal">
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="./sobre.html">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
         </nav>
+        <div class="header-actions">
+          <button class="search-icon" aria-label="Abrir busca">🔍</button>
+          <button class="hamburger" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" aria-label="Menu Mobile">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="./sobre.html">Sobre Nós</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
     </header>
-</body>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src="./assets/img/logo-lado-a-lado-devnexsolution.svg"
+            alt="Devnex Solutions"
+          />
+          <p>Transformando tecnologia em performance real.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links institucionais">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="./sobre.html">Sobre Nós</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#portfolioecases">Portfólio & Cases</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-label="Conteúdos">
+          <h4>Conteúdo</h4>
+          <ul>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#updates">Atualizações</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p>Email: contato@devnexsolutions.com</p>
+          <p>Atendimento: Seg–Sex, 09h às 18h</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Devnex Solutions. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      const searchIcon = document.querySelector(".search-icon");
+      const searchWrapper = document.querySelector(".search-wrapper");
+      const closeSearch = document.querySelector(".close-search");
+
+      // MENU MOBILE
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileNav.classList.toggle("show");
+      });
+
+      // ABRIR BUSCA MOBILE
+      searchIcon.addEventListener("click", () => {
+        searchWrapper.classList.add("active");
+        searchIcon.style.display = "none";
+      });
+
+      // FECHAR BUSCA
+      closeSearch.addEventListener("click", () => {
+        searchWrapper.classList.remove("active");
+        searchIcon.style.display = "block";
+      });
+    </script>
+  </body>
 </html>

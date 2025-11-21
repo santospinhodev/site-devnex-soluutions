@@ -1,0 +1,37 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+
+  <g stroke="#163A8F" stroke-width="1.2" stroke-opacity="0.08" fill="none">
+
+    <!-- Cantos superiores -->
+    <path d="M50 40 L300 120"></path>
+    <path d="M120 20 L420 160"></path>
+    <path d="M200 60 L500 200"></path>
+    <path d="M0 150 L260 260"></path>
+
+    <!-- Bordas esquerdas -->
+    <path d="M40 300 L230 380"></path>
+    <path d="M0 380 L260 480"></path>
+    <path d="M60 500 L260 620"></path>
+    <path d="M20 600 L240 760"></path>
+
+    <!-- Bordas direitas -->
+    <path d="M1580 260 L1350 340"></path>
+    <path d="M1600 340 L1300 460"></path>
+    <path d="M1500 480 L1280 620"></path>
+    <path d="M1600 620 L1350 760"></path>
+
+    <!-- Cantos inferiores -->
+    <path d="M200 820 L520 700"></path>
+    <path d="M80 860 L420 720"></path>
+    <path d="M1400 700 L1100 820"></path>
+    <path d="M1500 860 L1180 720"></path>
+
+    <!-- Linhas soltas diagonais para dar "aleatoriedade" -->
+    <path d="M300 100 L450 180"></path>
+    <path d="M1250 120 L1400 200"></path>
+    <path d="M350 700 L500 770"></path>
+    <path d="M1100 750 L1250 830"></path>
+
+  </g>
+
+</svg>
