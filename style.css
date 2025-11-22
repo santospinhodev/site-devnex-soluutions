@@ -194,13 +194,15 @@ header {
 /* === MEDIA QUERY PARA DESKTOP (MOBILE FIRST) === */
 @media (min-width: 992px) {
   .header-container {
-    max-width: 1280px;
-    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   /* LOGO Desktop */
   .logo img {
     height: 65px;
+    flex-shrink: 0;
   }
 
   /* MOBILE ELEMENTS HIDDEN */
@@ -212,32 +214,37 @@ header {
 
   /* NAV DESKTOP VISÍVEL */
   .main-nav {
-    display: block;
-    margin-right: auto; /* Empurra a nav para a esquerda */
-    margin-left: 30px; /* Espaçamento da logo */
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
   .main-nav ul {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
+    align-items: center;
   }
   .main-nav a {
     color: var(--color-primary);
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     transition: color 0.2s;
+    font-size: 17px;
+    padding: 8px 0;
   }
 
   /* BUSCA DESKTOP */
   .search-wrapper {
+    margin-left: auto;
     display: flex;
     align-items: center;
-    position: static;
-    transform: none;
+    gap: 8px;
   }
   .search-input {
     border: 1px solid #ccc;
     padding: 0 12px;
-    width: 200px;
+    width: 250px;
+    height: 45px;
+    margin-left: 30px;
   }
   .close-search {
     display: none;
@@ -535,5 +542,43 @@ footer {
   .footer-nav,
   .footer-contact {
     flex-basis: auto; /* Deixa o flexbox decidir o tamanho */
+  }
+}
+
+/* Mobile: cards um embaixo do outro */
+@media (max-width: 768px) {
+  .service-points {
+    flex-direction: column;
+  }
+
+  .service-points > div {
+    width: 100%;
+  }
+}
+
+/* ===== AJUSTES DO HERO NO MOBILE ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+    min-height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .hero button {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  .hero-background-svg {
+    opacity: 0.25; /* reduz intensidade no mobile */
   }
 }
